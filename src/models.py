@@ -25,6 +25,13 @@ class Address(Base):
     person_id = Column(Integer, ForeignKey('person.id'))
     person = relationship(Person)
 
+class Hola(Base):
+    __tablename__ = 'Hola'
+    # Here we define columns for the table person
+    # Notice that each column is also a normal Python instance attribute.
+    id = Column(Integer, primary_key=True)
+    Lolo = Column(String(250), nullable=False)
+
     def to_dict(self):
         return {}
 
